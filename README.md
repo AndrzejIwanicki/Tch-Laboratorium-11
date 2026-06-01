@@ -1,6 +1,6 @@
 # Tch-Laboratorium-11
 
-'''bash
+```bash
 
 $ docker compose up -d
 
