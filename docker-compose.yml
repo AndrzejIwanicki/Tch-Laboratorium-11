@@ -1,0 +1,38 @@
+networks:
+  lab11net:
+    driver: bridge
+    name: lab11net
+
+services:
+  web1:
+    image: nginx:latest
+    container_name: web1
+    ports:
+      - "8081:80"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - ./web1_logs:/var/log/nginx
+    networks:
+      - lab11net
+
+  web2:
+    image: nginx:latest
+    container_name: web2
+    ports:
+      - "8082:80"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - ./web2_logs:/var/log/nginx
+    networks:
+      - lab11net
+
+  web3:
+    image: nginx:latest
+    container_name: web3
+    ports:
+      - "8083:80"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - ./web3_logs:/var/log/nginx
+    networks:
+      - lab11net
