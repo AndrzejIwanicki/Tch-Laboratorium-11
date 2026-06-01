@@ -1,5 +1,7 @@
 # Tch-Laboratorium-11
 
+'''bash
+
 $ docker compose up -d
 
  ✔ Network lab11net Created                                                                                        0.0s
@@ -100,3 +102,4 @@ $ curl http://localhost:8083
     </div>
 </body>
 </html>
+```
